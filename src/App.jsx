@@ -31,7 +31,7 @@ function App() {
 
     const formData = new FormData();
     formData.append('file', file);
-    const BASE_URL = import.meta.env.BASE_URL;
+    const BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
     try {
       const response = await axios.post(`${BASE_URL}/generate`, formData, {
